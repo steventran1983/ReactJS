@@ -1,0 +1,10 @@
+                Document 
+
+                Root element (HTML) 
+
+    Element (head)                                          Element (body)
+                                                       Attribute (href)  Element (a)   Element (h1)                                            
+
+    Element (title)                                                       Text (my link)    Text (my header)
+
+    Text (my title)

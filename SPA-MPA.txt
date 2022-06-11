@@ -1,0 +1,4 @@
+# SPA : Single Page Application 
+
+1. Not required reload the whole page during users interact with webpage 
+2. Most the page is loaded from the first time
