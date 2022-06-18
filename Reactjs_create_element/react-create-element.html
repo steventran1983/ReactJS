@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- React.createElement() => react element
+        + Create a smallest object during working with React
+    Compare react.createElement() with document.createElement => DOM createElement
+    Change id,className,style 
+    Adding text HTML -->
+
+</body>
+    <script>
+        const h1DOM = document.createElement('h1')
+        h1DOM.title = "Hello"
+        h1DOM.className = "heading"
+        h1DOM.innerText = "Heloo Guys !"
+        document.body.appendChild(h1DOM)
+        //React 
+
+
+
+        //React.createElement(title,props,children,n)
+        const h1React = React.createElement('h1',{
+            title: "Hello",
+            className: "heading"
+        },'Hello Guys')
+
+        console.dir(h1DOM)
+        console.log(h1React)
+    </script>
+</html>
