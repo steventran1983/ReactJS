@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1. Why using react Dom 
+    2. Why separate react dom out of react 
+    3. Render UI -->
+    <div id="root"></div>
+</body>
+    <script>
+       const reactClass = React.createElement('div',{
+            className: 'container'
+       },
+       React.createElement('h1',{
+        title:'Hello',
+        className:'heading'
+       },"Hello Guys !"),
+       React.createElement('ul',null,
+       React.createElement('li',null,'JavaScript'),
+       React.createElement('li',null,'ReactJS'))
+       )
+       const root = document.getElementById('root')
+       
+       ReactDOM.render(reactClass,root)
+    </script>
+</html>

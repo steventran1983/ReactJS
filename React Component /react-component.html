@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>React component</title>
+</head>
+
+<body>
+    <!-- React element type: string, function/class 
+        - Wrapper 
+            Header -> header component
+            Content -> Content coponent 
+            Footer -> Footer Component -->
+    <div id="app"></div>
+    <script type="text/babel">
+
+        function Header() {
+            return (
+                <div className="post-item">
+                    <img src="https://f8.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fhuyphamcloud%2Fimage%2Fupload%2Fv1643448478%2Ff8%2Frxdimgsgdikttdqsgd7p.png&w=3840&q=75" alt="Thang Cong Tu" />
+                    <h2 className="post-title"> Thang Cong Tu</h2>
+                    <p>Please contact us for more information</p>
+                    <p>My Name is Thang and I am learning React</p>
+                </div>
+            )
+        }
+
+        function Footer() {
+            return (
+                <div className="post-item">
+                    <img src="https://f8.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fhuyphamcloud%2Fimage%2Fupload%2Fv1643448478%2Ff8%2Frxdimgsgdikttdqsgd7p.png&w=3840&q=75" alt="Thang Cong Tu" />
+                    <h2 className="post-title"> This is the Footer</h2>
+                    <p>Please contact us for more information</p>
+                    <p>My Name is Thang and I am learning React</p>
+                </div>
+            )
+        }
+        const postItem = (
+            <div className="post-list">
+                <Header />
+                <Footer />
+                <Header />
+                <Footer />
+                <Header />
+                <Footer />
+                <Header />
+                <Footer />
+
+            </div>
+        )
+        ReactDOM.render(postItem, document.getElementById('app'))
+    </script>
+
+</body>
+
+</html>
