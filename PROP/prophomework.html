@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>React component</title>
+</head>
+
+<body>
+    <!-- React element type: string, function/class 
+        - Wrapper 
+            Header -> header component
+            Content -> Content coponent 
+            Footer -> Footer Component -->
+    <div id="app"></div>
+    <script type="text/babel">
+
+        const employees = [
+            { "name": "Ram", "email": "ram@gmail.com", "age": 23 },
+            { "name": "Shyam", "email": "shyam23@gmail.com", "age": 28 },
+            { "name": "John", "email": "john@gmail.com", "age": 33 },
+            { "name": "Bob", "email": "bob32@gmail.com", "age": 41 }
+        ]
+
+
+        function PostEmployee({ employee }) {
+            console.log(employee);
+            return (
+                <div className="post-employee">
+                    <h1 onClick={() => console.log(employee.name)} id="name">{employee.name}</h1>
+                    <h1 id="name">{employee.email}</h1>
+                </div>
+            )
+        }
+
+        const postItem = (
+            <div className="wrapper">
+                {employees.map((emp, index) => (
+                    <PostEmployee
+                        key={index}
+                        employee={emp}
+                    />
+                ))}
+            </div>
+        )
+
+        ReactDOM.render(postItem, document.getElementById('app'))
+    </script>
+
+</body>
+
+</html>
